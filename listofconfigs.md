@@ -1,0 +1,3 @@
+hypr
+neofetch
+i3
