@@ -1,3 +1,14 @@
 hypr
 neofetch
 i3
+alacritty
+autorandr/diagonal
+dunst
+nvim
+rofi
+wofi
+sway
+swaylock
+tmux
+picom.conf
+autorandr/trottier_up

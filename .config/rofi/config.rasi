@@ -1,0 +1,31 @@
+// combi is basically a combination of all rofi windows
+// set `-show combi` in i3 config to show it at first page
+
+configuration {
+	modes: "emoji,run,calc,combi";
+	combi-modi: "drun,ssh,run";
+    font: "Fira Code Medium 15";
+    show-icons: true;
+    icon-theme: "Tela-dark-purple";
+    display-combi: "> ";
+    display-drun: "";
+    display-ssh: "ssh";
+    display-calc: "🧮";
+    disable-history: false;
+}
+
+
+//@theme "dracula.rasi"
+@theme "karamel"
+
+// to override theme with local config here
+// @theme "/dev/null"
+
+#textbox-prompt-colon {
+    expand:     false;
+    str:        "";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @foreground;
+}
+
+
