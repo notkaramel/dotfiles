@@ -12,3 +12,4 @@ swaylock
 tmux
 picom.conf
 autorandr/trottier_up
+hypr
