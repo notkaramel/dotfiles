@@ -134,7 +134,8 @@ alias fallinlight="feh --bg-fill --randomize /home/antoine/Pictures/Fallin\'\ Li
 alias micvol="wpctl set-volume @DEFAULT_SOURCE@"
 
 alias enable-nvidia='export __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
-alias weather='inxi -wxx --weather-unit m'
+# alias weather='inxi -wxx --weather-unit m'
+alias weather="curl https://wttr.in"
 alias cal='cal -m'
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
