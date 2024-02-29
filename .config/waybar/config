@@ -1,0 +1,113 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+	"position": "top",
+  "font": "Fira Code Bold 12",
+  "margin": 5,
+
+	"modules-left": [
+		"hyprland/workspaces",
+    "hyprland/window"
+	],
+	"modules-center": [
+		"clock#1",
+		"clock#2",
+		"clock#3",
+	],
+	"modules-right": [
+		"tray",
+		"pulseaudio",
+    "backlight",
+    "memory",
+		"cpu",
+		"battery",
+		"keyboard-state"
+	],
+
+	"hyprland/workspaces": {
+      "on-scroll-up": "hyprctl dispatch workspace m-1",
+      "on-scroll-down": "hyprctl dispatch workspace m+1",
+		  "disable-scroll": true,
+		  "format": "{name}",
+	},
+
+  "hyprland/window": {
+    "max-length": 200,
+    "separate-outputs": true,
+  },
+
+	"clock#1": {
+		"format": "{:%A}",
+		"tooltip": false
+	},
+	"clock#2": {
+		"format": "{:%I:%M %p}",
+		"tooltip": false
+	},
+	"clock#3": {
+		"format": "{:%d/%m/%Y}",
+		"tooltip": true
+	},
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": false,
+    "format": {
+      "numlock": "NL {icon}"
+    },
+    "format-icons": {
+        "locked": "",
+        "unlocked": ""
+    }
+  },
+	"pulseaudio": {
+		"format": "{icon} {volume:2}%",
+		"format-bluetooth": "{icon} {volume:2}% ",
+		"format-muted": "🔇 MUTED",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"scroll-step": 6,
+		"on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pavucontrol"
+	},
+
+  "backlight": {
+    "format": "{icon} {percent:3}%",
+    "format-icons": ["🌑", "🌘", "🌗", "🌖", "🌕"],
+    "on-scroll-up": "brightnessctl set 1%+ -q -e",
+    "on-scroll-down": "brightnessctl set 1%- -q -e"
+  },
+
+	"memory": {
+		"interval": 5,
+		"format": "Mem {:2}%"
+	},
+	"cpu": {
+		"interval": 5,
+		"format": "CPU {usage:2}%"
+	},
+	"battery": {
+		"states": {
+			"good": 80,
+			"warning": 42,
+			"critical": 20
+		},
+		"format": "{icon}  {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"tray": {
+		"icon-size": 20,
+    "spacing": 7
+	}
+}

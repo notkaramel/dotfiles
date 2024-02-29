@@ -1,1 +1,0 @@
-Weird stuffs to show on GitHub profile 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="sftp://antoinep@unicorn.cim.mcgill.ca/" added="2023-05-04T14:58:28.046243Z" modified="2023-08-28T20:48:40.000940Z" visited="2023-08-28T20:48:40.000937Z">
+    <title>/ on unicorn.cim.mcgill.ca</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-08-28T20:48:40.000939Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="sftp://unicorn/" added="2023-06-07T05:32:38.628594Z" modified="2023-06-09T17:08:44.973961Z" visited="2023-06-09T17:08:44.973957Z">
+    <title>/ on unicorn</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-06-09T17:08:44.973959Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="sftp://solareclipse/" added="2023-12-26T18:24:38.977635Z" modified="2023-12-26T18:24:38.977652Z" visited="2023-12-26T18:24:38.977640Z">
+    <title>/ on solareclipse</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-12-26T18:24:38.977645Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

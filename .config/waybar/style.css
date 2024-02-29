@@ -1,0 +1,79 @@
+* {
+	font-size: 12px;
+	font-family: "FiraCode Nerd Mono Retina", monospace;
+  font-weight: bold;
+  border-radius: 8px;
+}
+ 
+.modules-center {
+}
+
+window#waybar {
+	background-color: transparent;
+}
+
+#clock.1, #clock.2, #clock.3,
+#pulseaudio, #memory, #cpu,
+#battery, #disk, #backlight, #tray,
+#keyboard-state {
+  background: rgba(12, 12, 12, 0.5);
+  padding: 0 12px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#window {
+  padding: 0 12px;
+  margin: 0 2px;
+  background: rgba(12, 12, 12, 0.3);
+  text-shadow: 2px 4px rgba(20, 20, 20, 0.2);
+}
+
+window#waybar.empty #window {
+  background: transparent;
+}
+
+#workspaces {
+  background: rgba(12, 12, 12, 0.5);
+}
+
+#workspaces button {
+	padding: 0 2px;
+	color: #fdf6e3;
+  border: 2px solid transparent;
+}
+
+/* button.active for hyprland, button.focused for sway */
+#workspaces button.active {
+	color: white;
+  border: 2px solid rgba(40, 190, 120, 0.8);
+}
+
+#workspaces button:hover {
+	box-shadow: inherit;
+	text-shadow: inherit;
+}
+
+#pulseaudio {
+	color: #268bd2;
+}
+#backlight {
+  color: #a3f281;
+}
+#memory {
+	color: #2aa198;
+}
+#cpu {
+	color: #6c71c4;
+}
+#battery {
+	color: #859900;
+}
+#disk {
+	color: #b58900;
+}
+
+#keyboard-state {
+  color: #ba3ba3;
+}
+

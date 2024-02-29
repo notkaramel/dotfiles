@@ -1,0 +1,5 @@
+#!/bin/bash
+
+feh --bg-fill --randomize $HOME/.wallpaper
+notify-send "New monitor detected!"
+# xset s off -dpms
