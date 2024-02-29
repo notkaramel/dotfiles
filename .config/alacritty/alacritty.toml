@@ -1,10 +1,14 @@
+import = [
+    "~/.config/alacritty/themes/themes/dracula.toml"
+]
+
 [colors.cursor]
 cursor = "CellForeground"
 text = "CellBackground"
 
-[colors.primary]
-background = "#1d1f21"
-foreground = "#c5c8c6"
+# [colors.primary]
+# background = "#1d1f21"
+# foreground = "#c5c8c6"
 
 [cursor]
 blink_interval = 750

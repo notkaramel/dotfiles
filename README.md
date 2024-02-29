@@ -1,8 +1,8 @@
 # dotfiles
 
-My configuration and styling for things I use on my Linux PC.
+My configuration and styling for things I use on my Linux PC, while embracing the power of GNU Stow and symlink!
 
-More details will come!
+Shoutout to **Dreams of Autonomy** and [this amazing video](https://youtu.be/y6XCebnB9gs) about managing dotfiles.
 
 # License (CC0 1.0 Universal)
 > See [LICENSE](LICENSE) for the full text.
