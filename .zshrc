@@ -142,6 +142,8 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 
+export GPG_TTY=$(tty)
+
 # bun completions
 [ -s "/home/antoine/.bun/_bun" ] && source "/home/antoine/.bun/_bun"
 
