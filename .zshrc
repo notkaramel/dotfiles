@@ -137,6 +137,7 @@ alias enable-nvidia='export __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAM
 # alias weather='inxi -wxx --weather-unit m'
 alias weather="curl https://wttr.in"
 alias cal='cal -m'
+alias please='sudo'
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus

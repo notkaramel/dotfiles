@@ -13,7 +13,7 @@ window#waybar {
 }
 
 #clock.1, #clock.2, #clock.3,
-#pulseaudio, #memory, #cpu,
+#pulseaudio, #memory, #cpu, #network,
 #battery, #disk, #backlight, #tray,
 #keyboard-state {
   background: rgba(12, 12, 12, 0.5);
@@ -71,6 +71,10 @@ window#waybar.empty #window {
 }
 #disk {
 	color: #b58900;
+}
+
+#network {
+  color: #155aa4;
 }
 
 #keyboard-state {

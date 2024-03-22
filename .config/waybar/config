@@ -21,6 +21,7 @@
     "backlight",
     "memory",
 		"cpu",
+    "network",
 		"battery",
 		"keyboard-state"
 	],
@@ -109,5 +110,16 @@
 	"tray": {
 		"icon-size": 20,
     "spacing": 7
-	}
+	},
+  "network": {
+    "interface": "wlo1",
+    "format": "{ifname}",
+    "format-wifi": "{essid}  ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗 ",
+    "format-disconnected": "", //An empty format will hide the module.
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗 ",
+    "tooltip-format-wifi": "Up: {bandwidthUpBytes} - Down: {bandwidthDownBytes}",
+    "tooltip-format-ethernet": "{ifname}  ",
+    "tooltip-format-disconnected": "Disconnected",
+  }
 }
