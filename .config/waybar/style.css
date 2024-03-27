@@ -13,7 +13,7 @@ window#waybar {
 }
 
 #clock.1, #clock.2, #clock.3,
-#pulseaudio, #memory, #cpu, #network,
+#pulseaudio, #memory, #cpu, #network, #mpd,
 #battery, #disk, #backlight, #tray,
 #keyboard-state {
   background: rgba(12, 12, 12, 0.5);
@@ -38,7 +38,7 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
-	padding: 0 2px;
+	padding: 0 4px;
 	color: #fdf6e3;
   border: 2px solid transparent;
 }
@@ -46,7 +46,7 @@ window#waybar.empty #window {
 /* button.active for hyprland, button.focused for sway */
 #workspaces button.active {
 	color: white;
-  border: 2px solid rgba(40, 190, 120, 0.8);
+  border: 2px solid rgba(40, 170, 120, 0.9);
 }
 
 #workspaces button:hover {
@@ -69,6 +69,11 @@ window#waybar.empty #window {
 #battery {
 	color: #859900;
 }
+
+#battery.charging {
+  color: #00f923;
+}
+
 #disk {
 	color: #b58900;
 }
