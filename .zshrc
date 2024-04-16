@@ -97,7 +97,7 @@ if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]
 then
     # Autostart Hyprland
     export GTK_THEME=adw-gtk3-dark:dark
-    exec Hyprland
+    exec Hyprland >> ~/hyprland_log
 elif [ -z $DISPLAY ] && [ $(tty) = /dev/tty2 ]
 then
     # Autostart X at login for tty2, using i3 WM
