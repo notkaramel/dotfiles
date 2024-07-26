@@ -16,10 +16,13 @@ window#waybar {
 #pulseaudio, #memory, #cpu, #network, #mpd,
 #battery, #disk, #backlight, #tray,
 #keyboard-state {
-  background: rgba(12, 12, 12, 0.5);
+  background: rgba(12, 12, 12, 0.64);
+  text-shadow: 2px 3px 2px rgba(20, 20, 20, 0.3);
+  /* background: rgba(12, 12, 12, 0.7); */
   padding: 0 12px;
   margin-left: 2px;
   margin-right: 2px;
+  color: white;
 }
 
 #window {
@@ -52,37 +55,5 @@ window#waybar.empty #window {
 #workspaces button:hover {
 	box-shadow: inherit;
 	text-shadow: inherit;
-}
-
-#pulseaudio {
-	color: #268bd2;
-}
-#backlight {
-  color: #a3f281;
-}
-#memory {
-	color: #2aa198;
-}
-#cpu {
-	color: #6c71c4;
-}
-#battery {
-	color: #859900;
-}
-
-#battery.charging {
-  color: #00f923;
-}
-
-#disk {
-	color: #b58900;
-}
-
-#network {
-  color: #155aa4;
-}
-
-#keyboard-state {
-  color: #ba3ba3;
 }
 

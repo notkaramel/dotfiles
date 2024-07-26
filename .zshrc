@@ -97,7 +97,7 @@ if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]
 then
     # Autostart Hyprland
     export GTK_THEME=adw-gtk3-dark:dark
-    exec Hyprland >> ~/hyprland_log
+    exec Hyprland
 elif [ -z $DISPLAY ] && [ $(tty) = /dev/tty2 ]
 then
     # Autostart X at login for tty2, using i3 WM
@@ -138,6 +138,9 @@ alias enable-nvidia='export __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAM
 alias weather="curl https://wttr.in"
 alias cal='cal -m'
 alias please='sudo'
+
+alias ibus-en='ibus engine xkb:us:intl:eng'
+alias ibus-vn='ibus engine Bamboo'
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
@@ -152,3 +155,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 eval "$(zoxide init --cmd cd zsh)"
+
+
+
+if [ -e /home/antoine/.nix-profile/etc/profile.d/nix.sh ]; then . /home/antoine/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
