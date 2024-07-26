@@ -113,7 +113,7 @@
     "spacing": 7
 	},
   "network": {
-    "interface": "wlo1",
+    "interface": "wlan0",
     "format": "{ifname}",
     "format-wifi": "{essid}  ",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗 ",
