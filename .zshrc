@@ -70,8 +70,8 @@ plugins=(
   bgnotify
   zsh-autosuggestions
   zsh-syntax-highlighting
-  zsh-history-enquirer
   jovial
+  archlinux
 )
 
 source $ZSH/oh-my-zsh.sh
