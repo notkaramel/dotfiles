@@ -67,8 +67,10 @@ plugins=(
   git
   autojump
   urltools
+  bgnotify
   zsh-autosuggestions
   zsh-syntax-highlighting
+  zsh-history-enquirer
   jovial
 )
 
@@ -159,3 +161,7 @@ eval "$(zoxide init --cmd cd zsh)"
 
 
 if [ -e /home/antoine/.nix-profile/etc/profile.d/nix.sh ]; then . /home/antoine/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
