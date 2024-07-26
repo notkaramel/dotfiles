@@ -8,6 +8,12 @@ cd ~/dotfiles
 stow <the app>
 ```
 
+Behind the scene, by default, Stow does:
+```sh
+stow <the app> --target ~/
+# --target -> the parent folder
+```
+
 Credit: to [**Dreams of Autonomy** video](https://youtu.be/y6XCebnB9gs) and [**DevInsideYou**'s video](https://youtu.be/CFzEuBGPPPg) on GNU stow.
 
 # License (CC0 1.0 Universal)

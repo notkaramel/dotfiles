@@ -9,7 +9,7 @@ color=#4ce09b
 # color=#4de83caa
 
 [BATTERY]
-command=~/.config/i3blocks/battery/battery.sh
+command=~/.config/i3blocks/battery.sh
 interval=12
 
 # [BATTERY-CAP]
@@ -23,7 +23,7 @@ interval=12
 color=#73e0e6
 
 [SOUND]
-command=$HOME/.config/i3blocks/sound/sound.sh
+command=$HOME/.config/i3blocks/sound.sh
 interval=2
 signal=1
 color=#81a4fc
@@ -35,6 +35,6 @@ signal=2
 color=#f8ffe8
 
 [CAPSNUM-LOCK]
-command=$HOME/.config/i3blocks/CapsNumLock/capsnumlock.sh
+command=$HOME/.config/i3blocks/capsnumlock.sh
 interval=once
 signal=10
