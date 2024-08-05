@@ -31,10 +31,10 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'preservim/tagbar'
 Plug 'preservim/nerdtree'
-Plug 'tpope/vim-surround'
-Plug 'airblade/vim-gitgutter'
+" Plug 'tpope/vim-surround'
+" Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 

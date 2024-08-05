@@ -148,3 +148,7 @@ alias arcli="arduino-cli"
 alias mcgillvpn='/opt/cisco/anyconnect/bin/vpnui &'
 alias mcgillvpn='/opt/cisco/anyconnect/bin/vpnui &'
 alias mcgillvpn='/opt/cisco/anyconnect/bin/vpnui &'
+
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus

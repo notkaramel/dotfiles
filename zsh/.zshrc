@@ -4,7 +4,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="jovial"
+ZSH_THEME="theunraveler"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -66,12 +66,11 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   git
   autojump
-  urltools
-  bgnotify
   zsh-autosuggestions
   zsh-syntax-highlighting
-  jovial
   archlinux
+  sudo 
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -129,7 +128,7 @@ alias connectWifi='sudo wpa_supplicant -B -i wlo1 -c /etc/wpa_supplicant/wpa_sup
 alias project='cd ~/Partage/Projects/'
 alias coding='cd $HOME/Partage/Coding'
 
-alias gotop="gotop -l kitchensink -c monokai --nvidia"
+alias gotop="gotop -l kitchensink --nvidia"
 alias setbackground="feh --bg-fill --randomize $HOME/.wallpaper/"
 
 alias fallinlight="feh --bg-fill --randomize /home/antoine/Pictures/Fallin\'\ Light"
@@ -143,6 +142,7 @@ alias please='sudo'
 
 alias ibus-en='ibus engine xkb:us:intl:eng'
 alias ibus-vn='ibus engine Bamboo'
+
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
@@ -157,7 +157,6 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 eval "$(zoxide init --cmd cd zsh)"
-
 
 
 if [ -e /home/antoine/.nix-profile/etc/profile.d/nix.sh ]; then . /home/antoine/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
