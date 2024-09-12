@@ -99,11 +99,11 @@ then
     # Autostart Hyprland
     export GTK_THEME=adw-gtk3-dark:dark
     exec Hyprland
-elif [ -z $DISPLAY ] && [ $(tty) = /dev/tty2 ]
-then
+# elif [ -z $DISPLAY ] && [ $(tty) = /dev/tty2 ]
+# then
     # Autostart X at login for tty2, using i3 WM
-    export GTK_THEME=adw-gtk3-dark:dark
-    exec startx
+#    export GTK_THEME=adw-gtk3-dark:dark
+#    exec startx
 fi
 
 ## Auto start Wayland at login, using Sway on Wayland tty2
@@ -148,8 +148,8 @@ alias ibus-vn='ibus engine Bamboo'
 # export XMODIFIERS=@im=ibus
 
 export XMODIFIERS=@im=fcitx
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
 
 export GPG_TTY=$(tty)
 

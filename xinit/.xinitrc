@@ -28,17 +28,18 @@ if [ -f "$usermodmap" ]; then
 fi
 # start some nice programs
 
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
-fi
+# if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+# for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+#  [ -x "$f" ] && . "$f"
+# done
+# unset f
+#fi
 
 # exec numlockx &
-exec ibus-daemon -rxR &
-export GTK_THEME=adw-gtk3-dark:dark 
+# exec ibus-daemon -rxR &
+# export GTK_THEME=adw-gtk3-dark:dark 
 
-exec i3 -c /home/antoine/.config/i3/config
-exec autorandr --change
-exec autotiling &
+# exec i3 -c /home/antoine/.config/i3/config
+exec i3
+# exec autorandr --change
+# exec autotiling &
