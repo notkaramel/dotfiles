@@ -5,9 +5,9 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-#xrandr --setprovideroutputsource modesetting NVIDIA-0
-#xrandr --auto
-#xrandr --dpi 96
+# xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+xrandr --dpi 96
 
 # merge in defaults and keymaps
 
@@ -35,11 +35,10 @@ fi
 # unset f
 #fi
 
-# exec numlockx &
-# exec ibus-daemon -rxR &
-# export GTK_THEME=adw-gtk3-dark:dark 
+exec numlockx &
+exec ibus-daemon -rxR &
+export GTK_THEME=adw-gtk3-dark:dark 
 
-# exec i3 -c /home/antoine/.config/i3/config
-exec i3
-# exec autorandr --change
-# exec autotiling &
+exec i3 -c /home/antoine/.config/i3/config
+exec autorandr --change
+exec autotiling &

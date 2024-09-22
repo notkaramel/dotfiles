@@ -39,30 +39,20 @@ ENABLE_CORRECTION="false"
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="%F{yellow}....hmm..."
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
 # You can set one of the optional three formats:
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yy-mm-dd"
 
-# Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
   autojump
@@ -77,43 +67,27 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
+export ARCHFLAGS="-arch x86_64"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export LC_ALL=en_CA.UTF-8
-if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]
-then
+
+# Starting a session from the TTY
+# if [ -z $DISPLAY ] && [ $(tty) = /dev/tty1 ]
+#then
     # Autostart Hyprland
-    export GTK_THEME=adw-gtk3-dark:dark
-    exec Hyprland
+#    export GTK_THEME=adw-gtk3-dark:dark
+#    exec Hyprland
 # elif [ -z $DISPLAY ] && [ $(tty) = /dev/tty2 ]
 # then
     # Autostart X at login for tty2, using i3 WM
 #    export GTK_THEME=adw-gtk3-dark:dark
 #    exec startx
-fi
-
-## Auto start Wayland at login, using Sway on Wayland tty2
-# Start i3 WM on login, opt in using dGPU (NVIDIA)
-#if [ -z "$DISPLAY" ] && [ "${XDG_VTNR}" -eq 2 ]; then
-#    echo "Starting i3 WM on tty2 and enable NVIDIA GPU by default"
-#   exec startx
-#    export __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia
 #fi
 
+# In case I need to enable NVIDIA from start
+#    export __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia
 
 export EDITOR=nvim
 
@@ -135,7 +109,6 @@ alias fallinlight="feh --bg-fill --randomize /home/antoine/Pictures/Fallin\'\ Li
 alias micvol="wpctl set-volume @DEFAULT_SOURCE@"
 
 alias enable-nvidia='export __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
-# alias weather='inxi -wxx --weather-unit m'
 alias weather="curl https://wttr.in"
 alias cal='cal -m'
 alias please='sudo'
@@ -162,8 +135,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 eval "$(zoxide init --cmd cd zsh)"
 
-
-if [ -e /home/antoine/.nix-profile/etc/profile.d/nix.sh ]; then . /home/antoine/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+# Added by Nix installer:
+# if [ -e /home/antoine/.nix-profile/etc/profile.d/nix.sh ]; then . /home/antoine/.nix-profile/etc/profile.d/nix.sh; fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -6,10 +6,12 @@ set $mod Mod4
 
 # transparency
 exec --no-startup-id picom -b
+exec autotiling &
 # --shadow --shadow-radius=60 --shadow-opacity=0.2  --fade-in-step=0.8 &
 # --inactive-opacity=0.9 
+
 # Font for window titles
-font pango:Fira Code 10
+font pango:FiraCode Nerd Font 10
 
 # Keymap
 exec setxkbmap -layout us -variant altgr-intl
