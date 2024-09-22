@@ -1,4 +1,4 @@
-# i3 config 
+# i3 config
 # @author Antoine Phan @notkaramel
 
 # mod key
@@ -7,11 +7,12 @@ set $mod Mod4
 # transparency
 exec --no-startup-id picom -b
 exec autotiling &
-# --shadow --shadow-radius=60 --shadow-opacity=0.2  --fade-in-step=0.8 &
-# --inactive-opacity=0.9 
+exec sudo modprobe v4l2loopback
 
 # Font for window titles
 font pango:FiraCode Nerd Font 10
+
+export GTK_THEME adw-gtk3-dark:dark
 
 # Keymap
 exec setxkbmap -layout us -variant altgr-intl
@@ -27,7 +28,7 @@ bindsym XF86AudioMute exec --no-startup-id wpctl set-mute @DEFAULT_SINK@ toggle 
 # brightness
 set $refresh_brightness pkill -SIGRTMIN+2 i3blocks
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+ && $refresh_brightness
-bindsym XF86MonBrightnessDown exec brightnessctl set 8%-  && $refresh_brightness
+bindsym XF86MonBrightnessDown exec brightnessctl set 8%- && $refresh_brightness
 
 # media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -51,21 +52,21 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# Menu|Program launcher 
+# Menu|Program launcher
 # bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id rofi -show combi 
+bindsym $mod+d exec --no-startup-id rofi -show combi
 bindsym $mod+period exec "rofi -show emoji"
 bindsym $mod+Tab exec rofi -show window
 bindsym $mod+c exec rofi -show calc
 
 # -- Lock screen --
-bindsym $mod+Shift+l exec notify-send 'Rendering new lockscreen!' && betterlockscreen -u ~/.wallpaper/ --fx dim && betterlockscreen -l dim 
+bindsym $mod+Shift+l exec notify-send 'Rendering new lockscreen!' && betterlockscreen -u ~/.wallpaper/ --fx dim && betterlockscreen -l dim
 bindsym $mod+l exec betterlockscreen -l dim
 
 # -- Screenshot --
 bindsym $mod+Shift+s exec "maim -s | xclip -selection clipboard -t image/png && notify-send 'Screenshot Captured!'"
 # interactive screenshot by pressing printscreen
-#bindsym Print exec gnome-screenshot -i 
+#bindsym Print exec gnome-screenshot -i
 #crop-area screenshot by pressing Mod + printscreen
 bindsym $mod+Print exec gnome-screenshot -a
 
@@ -116,7 +117,7 @@ client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-client.background       #ffffff
+client.background #ffffff
 
 # --- Gaps ---
 # `inner` is like padding in CSS
@@ -198,34 +199,34 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit' -B 'SHUTDOWN' 'shutdown now' -B 'Reboot' 'reboot'"
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+mode "resize"
+{
+	# same bindings, but for the arrow keys
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+	# back to normal: Enter or Escape or $mod+r
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
 }
-
-bindsym $mod+r mode "resize"
 
 # toggle showing bar
 bindsym $mod+b bar mode toggle
 # colors for the bars
-set $white #ffffff
-set $black #242424
-set $red #FFADAD
+set $white  #ffffff
+set $black  #242424
+set $red    #FFADAD
 set $orange #F7D9C4
 set $yellow #FAFF81
-set $blue #C6DEF1
-set $mint #A0C49A
-set $none ##00000000
+set $blue   #C6DEF1
+set $mint   #A0C49A
+set $none   ##00000000
 
-bar {
+bar
+{
 	status_command i3blocks
 	i3bar_command i3bar --transparency
 	# output primary
@@ -233,19 +234,20 @@ bar {
 	tray_output primary
 	font pango:FiraCode Nerd Font Semibold 11
 	separator_symbol "│"
-  padding 6 6 0 0
+	padding 6 6 0 0
 	workspace_min_width 32
 
-	colors {
+	colors
+	{
 		focused_background $blackbb
 		background $blackee
 		separator $blue33
 
-    # colorclass       	<border>  <background>  <text>	
-		focused_workspace 	$yellow	  $yellow	    $blackaa
-	  active_workspace   	$blue	    $blue       $black
-    inactive_workspace 	$mint	    $mintbb 	    $black
-	  urgent_workspace   	$orange	  $orange 	  $black
-    binding_mode       	$orange	  $orange       $black
+		# colorclass       	<border>  <background>  <text>
+		focused_workspace $yellow $yellow $blackaa
+		active_workspace $blue $blue $black
+		inactive_workspace $mint $mintbb $black
+		urgent_workspace $orange $orange $black
+		binding_mode $orange $orange $black
 	}
 }
