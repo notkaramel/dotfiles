@@ -11,3 +11,13 @@ user = "antoine"
 [initial_session]
 command = "Hyprland"
 user = "antoine"
+
+[theme]
+border = "magenta"
+text = "cyan"
+prompt = "green"
+time = "red"
+action = "blue"
+button = "yellow"
+container = "black"
+input = "red"

@@ -12,7 +12,7 @@ exec sudo modprobe v4l2loopback
 # Font for window titles
 font pango:FiraCode Nerd Font 10
 
-export GTK_THEME adw-gtk3-dark:dark
+exec export GTK_THEME adw-gtk3-dark:dark
 
 # Keymap
 exec setxkbmap -layout us -variant altgr-intl
