@@ -25,3 +25,13 @@ Essentially, you can do whatever you want with this and no need to credit me for
 
 # Notes
 - Network interface is set to `wlan0`
+
+# Useful commands:
+- Getting all the local packages (`pacman`)
+```sh
+pacman -Qs | grep "local/" | awk '{print $1}' - | awk -F '/' '{print $2}' > allPackages.txt
+```
+- (Re)Installing all packages back
+```sh
+cat allPackages.txt | yay -S - --needed
+```

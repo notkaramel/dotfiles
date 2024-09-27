@@ -7,17 +7,3 @@ vt = 1
 [default_session]
 command = "tuigreet --cmd /usr/bin/zsh"
 user = "antoine"
-
-[initial_session]
-command = "Hyprland"
-user = "antoine"
-
-[theme]
-border = "magenta"
-text = "cyan"
-prompt = "green"
-time = "red"
-action = "blue"
-button = "yellow"
-container = "black"
-input = "red"
