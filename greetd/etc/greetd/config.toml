@@ -5,5 +5,5 @@ vt = 1
 
 # The default session, also known as the greeter.
 [default_session]
-command = "tuigreet --cmd /usr/bin/zsh"
+command = "tuigreet --cmd Hyprland --theme border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red"
 user = "antoine"

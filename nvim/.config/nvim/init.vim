@@ -4,6 +4,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set noshowmode
+colorscheme vim
 
 " Normal mode remap
 nnoremap <Up>   gk

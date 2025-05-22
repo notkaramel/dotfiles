@@ -152,3 +152,6 @@ alias mcgillvpn='/opt/cisco/anyconnect/bin/vpnui &'
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
+
+alias mcgillvpn='/opt/cisco/anyconnect/bin/vpnui &'
+alias mcgillvpn='/opt/cisco/anyconnect/bin/vpnui &'

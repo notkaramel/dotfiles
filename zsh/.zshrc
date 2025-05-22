@@ -61,6 +61,7 @@ plugins=(
   archlinux
   sudo 
   tmux
+  arduino-cli
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -139,5 +140,14 @@ eval "$(zoxide init --cmd cd zsh)"
 # if [ -e /home/antoine/.nix-profile/etc/profile.d/nix.sh ]; then . /home/antoine/.nix-profile/etc/profile.d/nix.sh; fi
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias startNVM='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# MATLAB
+alias matlab="enable-nvidia && /usr/bin/matlab -nosoftwareopengl"
+
+alias bruh="echo 'bruh' | cowsay"
+
+# alias start_conda='source $HOME/antoine/anaconda3/bin/activate'
+# source /usr/share/nvm/init-nvm.sh
+
