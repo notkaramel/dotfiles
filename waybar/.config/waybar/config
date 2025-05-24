@@ -43,15 +43,6 @@
   "niri/workspaces": {
 	  "format": "{icon}",
 	  "format-icons": {
-		  // Named workspaces
-		  // (you need to configure them in niri)
-		  "browser": "",
-		  "discord": "",
-		  "chat": "<b></b>",
-
-		  // Icons by state
-		  "active": "",
-		  "default": ""
 	  }
   },
 
