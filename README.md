@@ -1,5 +1,4 @@
 # dotfiles
-
 My configuration and styling for things I use on my Linux PC, while embracing the power of GNU Stow and symlink!
 
 ```sh
@@ -35,3 +34,18 @@ pacman -Qs | grep "local/" | awk '{print $1}' - | awk -F '/' '{print $2}' > allP
 ```sh
 cat allPackages.txt | yay -S - --needed
 ```
+
+# Actively using programs
+- Shell: `zsh` with `oh-my-zsh`
+- Terminal: `alacritty`
+- WM: `hyprland` and (slowly configuring) `niri`
+  - Wallpaper: `hyprpaper`
+  - Notification: `mako`
+  - Lock: `swaylock`
+  - Bar: `waybar`
+  - Menu: `wofi` and `wofi-emoji`
+- Audio: `wireplumber`
+- Tools:
+  - `tmux`
+  - `neovim`
+

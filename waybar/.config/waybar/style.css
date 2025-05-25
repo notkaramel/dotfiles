@@ -28,7 +28,8 @@ window#waybar {
 #window {
   padding: 0 12px;
   margin: 0 2px;
-  background: rgba(12, 12, 12, 0.3);
+  color: white;
+  background: rgba(12, 12, 12, 0.5);
   text-shadow: 2px 4px rgba(20, 20, 20, 0.2);
 }
 

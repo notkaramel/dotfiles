@@ -9,7 +9,8 @@
 	"modules-left": [
 		"hyprland/workspaces",
     "hyprland/window",
-    "niri/workspaces"
+    "niri/workspaces",
+    "niri/window"
 	],
 	"modules-center": [
 		"clock#1",
@@ -41,9 +42,17 @@
   },
 
   "niri/workspaces": {
-	  "format": "{icon}",
+	  "format": "{output} {index}",
 	  "format-icons": {
 	  }
+  },
+
+  "niri/window": {
+	  "format": "{}",
+    "icon": true,
+    "separate-outputs": true,
+    "all-outputs": true,
+    "offscreen-css": true
   },
 
 	"clock#1": {
