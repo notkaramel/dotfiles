@@ -1,32 +1,16 @@
-// -*- mode: json -*-
-
 {
 	"layer": "top",
 	"position": "top",
   "font": "Fira Code Bold 12",
   "margin": 5,
 
+// ------ Left Module ------ //
 	"modules-left": [
 		"hyprland/workspaces",
-    "hyprland/window",
     "niri/workspaces",
+    "wlr/taskbar",
+    "hyprland/window",
     "niri/window"
-	],
-	"modules-center": [
-		"clock#1",
-		"clock#2",
-		"clock#3",
-	],
-	"modules-right": [
-		"tray",
-    "mpd",
-		"pulseaudio",
-    "backlight",
-    "memory",
-		"cpu",
-    "network",
-		"battery",
-		"keyboard-state"
 	],
 
 	"hyprland/workspaces": {
@@ -42,20 +26,35 @@
   },
 
   "niri/workspaces": {
-	  "format": "{output} {index}",
+	  "format": "{value}",
 	  "format-icons": {
 	  }
   },
 
   "niri/window": {
 	  "format": "{}",
-    "icon": true,
+    "icon": false,
     "separate-outputs": true,
-    "all-outputs": true,
     "offscreen-css": true
   },
+  
+  "wlr/taskbar": {
+        "format": "{icon}",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        // "on-click-middle": "close",
+        // "on-click-right": "fullscreen"
+    },
 
-	"clock#1": {
+
+// ------ Center Module ------ //
+	"modules-center": [
+		"clock#1",
+		"clock#2",
+		"clock#3",
+	],
+  
+  "clock#1": {
 		"format": "{:%A}",
 		"tooltip": false
 	},
@@ -67,6 +66,20 @@
 		"format": "{:%d/%m/%Y}",
 		"tooltip": true
 	},
+
+
+// ------ Right Module ------- //
+  "modules-right": [
+		"tray",
+		"pulseaudio",
+    "backlight",
+    "memory",
+		"cpu",
+    "network",
+		"battery",
+		"keyboard-state"
+	],
+	
   "keyboard-state": {
     "numlock": true,
     "capslock": false,
@@ -140,29 +153,4 @@
     "tooltip-format-ethernet": "{ifname}  ",
     "tooltip-format-disconnected": "Disconnected",
   },
-  "mpd": {
-    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
-    "format-disconnected": "Disconnected ",
-    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-    "interval": 10,
-    "consume-icons": {
-        "on": " " // Icon shows only when "consume" is on
-    },
-    "random-icons": {
-        "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
-        "on": " "
-    },
-    "repeat-icons": {
-        "on": " "
-    },
-    "single-icons": {
-        "on": "1 "
-    },
-    "state-icons": {
-        "paused": "",
-        "playing": ""
-    },
-    "tooltip-format": "MPD (connected)",
-    "tooltip-format-disconnected": "MPD (disconnected)"
-  }
-}
+ }

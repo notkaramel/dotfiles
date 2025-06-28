@@ -1,5 +1,8 @@
 mode=drun
+term=alacritty
 allow_images=true
 image_size=27
 hide_scroll=true
 insensitive=true
+print_command=true
+columns=1
