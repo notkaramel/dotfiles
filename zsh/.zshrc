@@ -62,7 +62,7 @@ plugins=(
   archlinux
   sudo 
   tmux
-  arduino-cli
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -153,3 +153,12 @@ alias bruh="echo 'bruh' | cowsay"
 # source /usr/share/nvm/init-nvm.sh
 
 alias ip="ip --color"
+
+
+# Aliases for bun (bun.sh)
+
+alias brd="bun run dev"
+alias bi="bun install"
+alias ba="bun add"
+alias brb="bun run build"
+alias brp="bun run preview"

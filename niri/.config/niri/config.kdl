@@ -301,7 +301,7 @@ binds {
     Mod+Return { spawn "alacritty"; }
     Mod+D { spawn "wofi"; }
     Mod+Shift+L { spawn "swaylock"; }
-    Mod+E { spawn "nautilus"; }
+    Mod+E { spawn "nemo"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
