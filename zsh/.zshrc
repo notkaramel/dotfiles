@@ -63,6 +63,7 @@ plugins=(
   sudo 
   tmux
   kubectl
+  minikube
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -162,3 +163,5 @@ alias bi="bun install"
 alias ba="bun add"
 alias brb="bun run build"
 alias brp="bun run preview"
+
+alias pecha="sleep 20 && echo \"KUCHA\""

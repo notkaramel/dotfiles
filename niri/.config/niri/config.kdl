@@ -36,8 +36,8 @@ output "eDP-1" {
 output "GIGA-BYTE TECHNOLOGY CO., LTD. G27F 2 23030B002769" {
   mode "1920x1080@170"
   scale 1
-  // Second monitor above
-  position x=0 y=-1080
+  // Second monitor to the right
+  position x=1920 y=0
 }
 
 output "Dell Inc. DELL U2412M YMYH14450KRL" {
@@ -61,6 +61,7 @@ input {
 
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
         }
+        numlock
     }
 
     // Next sections include libinput settings.
@@ -68,13 +69,13 @@ input {
     touchpad {
         // off
         tap
-        // dwt
+        dwt
         // dwtp
-        // drag-lock
+        drag-lock
         natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
-        // scroll-method "two-finger"
+        scroll-method "two-finger"
         // disabled-on-external-mouse
     }
 
@@ -118,11 +119,9 @@ layout {
 
     // Mod+R resize layout behaviors 
     preset-column-widths {
-        proportion 0.8
-        proportion 0.66667
         proportion 0.5
+        proportion 0.66667
         proportion 0.33333
-        proportion 0.25
         // Mod+F for full-width
         // fixed 1920
     }
@@ -243,6 +242,14 @@ animations {
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     slowdown 2.0
+    window-open {
+        duration-ms 150
+        curve "ease-out-cubic"
+    }
+
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
 }
 
 // Window rules let you adjust behavior for individual windows.
@@ -263,6 +270,11 @@ window-rule {
 window-rule {
     match app-id=r#"vivaldi$"# title="^Picture-in-Picture$"
     open-floating true
+}
+
+window-rule {
+  match title="^$"
+  open-floating true
 }
 
 // Example: block out two password managers from screen capture.
@@ -320,6 +332,7 @@ binds {
     Mod+B { spawn "blueberry"; }
     Mod+Z { spawn "playerctl" "play-pause"; }
     Mod+X { spawn "playerctl" "next"; }
+    Mod+Shift+B { spawn "pavucontrol"; }
     Mod+Period { spawn "wofi-emoji"; } 
 
     Mod+G { toggle-overview; }

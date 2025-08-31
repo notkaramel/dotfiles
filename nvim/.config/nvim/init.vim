@@ -36,8 +36,8 @@ Plug 'preservim/nerdtree'
 " Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 " Plug 'ryanoasis/vim-devicons'
-Plug 'godlygeek/tabular'
-Plug 'preservim/vim-markdown'
+" Plug 'godlygeek/tabular'
+" Plug 'preservim/vim-markdown'
 
 call plug#end()
 
