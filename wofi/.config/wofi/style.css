@@ -1,10 +1,16 @@
 window {
   border: 0px solid #ca93f9;
-  font-family: FiraCode Nerd Font;
+  font-family: 'Fira Code Retina';
   font-size: 16px;
   border-radius: 12px;
   padding: 10px;
-  background: linear-gradient(#e66465, #9198e5);
+  background: linear-gradient(#346af5, #31efc5);
+}
+
+#outer-box {
+  margin: 5px;
+  border-radius: 12px;
+  background-color: #282a36;
 }
 
 #input {
@@ -14,6 +20,10 @@ window {
   background-color: #44475a;
 }
 
+#scroll {
+
+}
+
 #inner-box {
   margin: 5px;
   border: none;
@@ -21,22 +31,28 @@ window {
   background-color: #282a36;
 }
 
-#outer-box {
-  margin: 5px;
-  border-radius: 12px;
-  background-color: #282a36;
+#img {
+
 }
 
 #text {
   margin: 5px;
   border: none;
   color: #f8f8f2;
-} 
+}
+
+#unselected {
+
+}
 
 #entry {
   border-radius: 12px;
 }
 
 #entry:selected {
-  background-color: #ab3452;
+  background-color: #3366cc;
+}
+
+#expander-box {
+  
 }

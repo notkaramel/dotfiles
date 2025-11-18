@@ -165,3 +165,26 @@ alias brb="bun run build"
 alias brp="bun run preview"
 
 alias pecha="sleep 20 && echo \"KUCHA\""
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/antoine/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/antoine/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/antoine/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/antoine/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# CD Player
+alias playcd='cdda2wav -D /dev/sr0 -t 1+ -B - | pw-play --rate 44100 --quality 15 -'
+
+# Load Angular CLI autocompletion.
+# source <(ng completion script)
+
+. "$HOME/.local/bin/env"
+
+alias dcb="docker compose build"
+alias dcu="docker compose up"
+alias dcud="docker compose up -d"
+alias dcd="docker compose down"
+alias dcuw="docker compose up --watch"
+
+
+alias intellij="exec $HOME/Applications/idea-IU-252.26830.84/bin/idea &"

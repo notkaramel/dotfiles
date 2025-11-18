@@ -37,11 +37,32 @@ output "GIGA-BYTE TECHNOLOGY CO., LTD. G27F 2 23030B002769" {
   mode "1920x1080@170"
   scale 1
   // Second monitor to the right
-  position x=1920 y=0
+  position x=-1920 y=0
 }
 
 output "Dell Inc. DELL U2412M YMYH14450KRL" {
   position x=0 y=-1200
+}
+
+// At work monitor
+output "Dell Inc. DELL E2418HN GXY2M8BJ1T9B" {
+  position x=0 y=-1080
+}
+
+// Trottier 5th floor monitors
+output "Dell Inc. DELL P2422HE 4MMLLQ3" {
+  position x=0 y=-1080 // on top
+}
+
+// 1B45, mirror
+output "Crestron Electronics, Inc. Crestron Unknown" {
+  position x=0 y=0
+}
+
+// The Factory
+output "Microstep MSI G274QPF CC2H633602149" {
+  mode "2560x1440@60.000"
+  position x=0 y=-1440
 }
 
 output "HDMI-A-1" {
@@ -128,11 +149,13 @@ layout {
     // Mod+Shift+R
     preset-window-heights {
         proportion 0.5
+        proportion 1.0
     }
 
     // The windows themselves will decide their initial width.
     default-column-width { 
-        proportion 0.6
+        // proportion 0.5
+        
     }
 
     focus-ring {
@@ -243,7 +266,7 @@ animations {
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     slowdown 2.0
     window-open {
-        duration-ms 150
+        duration-ms 240
         curve "ease-out-cubic"
     }
 
@@ -543,4 +566,9 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     // Mod+Shift+L { power-off-monitors; }
+}
+
+// Make the backdrop light.
+overview {
+    backdrop-color "#232337"
 }

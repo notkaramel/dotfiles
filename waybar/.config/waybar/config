@@ -87,8 +87,8 @@
       "numlock": "NL {icon}"
     },
     "format-icons": {
-        "locked": "",
-        "unlocked": ""
+        "locked": "🔳",
+        "unlocked": "⚪"
     }
   },
 	"pulseaudio": {
@@ -116,17 +116,28 @@
 
 	"memory": {
 		"interval": 5,
-		"format": "Mem {:2}%"
+    "format": "{used:0.2f}/{total:0.2f} GB"
 	},
 	"cpu": {
-		"interval": 5,
-		"format": "CPU {usage:2}%"
-	},
+     "interval": 1,
+     "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
+     "format-icons": [
+        "<span color='#d1b3ff'>▁</span>", // pastel purple (low)
+        "<span color='#b5c7ff'>▂</span>", // pastel blue
+        "<span color='#a8e6ff'>▃</span>", // pastel cyan
+        "<span color='#a8ffd1'>▄</span>", // pastel green
+        "<span color='#fff5a5'>▅</span>", // pastel yellow
+        "<span color='#ffd1a5'>▆</span>", // pastel orange
+        "<span color='#ffb3b3'>▇</span>", // light pastel red
+        "<span color='#ff9999'>█</span>"  // deeper pastel red (high)
+      ]
+  },
+  
 	"battery": {
 		"states": {
 			"good": 80,
 			"warning": 42,
-			"critical": 20
+			"critical": 24
 		},
 		"format": "{icon}  {capacity}%",
     "format-charging": " {icon}  {capacity}%",

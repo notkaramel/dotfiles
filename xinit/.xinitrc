@@ -35,10 +35,10 @@ fi
 # unset f
 #fi
 
-exec numlockx &
-exec ibus-daemon -rxR &
-export GTK_THEME=adw-gtk3-dark:dark 
+# exec numlockx &
+# exec ibus-daemon -rxR &
+# export GTK_THEME=adw-gtk3-dark:dark 
 
 exec i3 -c /home/antoine/.config/i3/config
-exec autorandr --change
+# exec autorandr --change
 exec autotiling &
