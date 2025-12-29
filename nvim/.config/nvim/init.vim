@@ -38,6 +38,9 @@ Plug 'preservim/nerdtree'
 " Plug 'ryanoasis/vim-devicons'
 " Plug 'godlygeek/tabular'
 " Plug 'preservim/vim-markdown'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 call plug#end()
 

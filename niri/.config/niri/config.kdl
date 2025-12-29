@@ -36,8 +36,8 @@ output "eDP-1" {
 output "GIGA-BYTE TECHNOLOGY CO., LTD. G27F 2 23030B002769" {
   mode "1920x1080@170"
   scale 1
-  // Second monitor to the right
-  position x=-1920 y=0
+  // Second monitor to the left
+  position x=1920 y=0
 }
 
 output "Dell Inc. DELL U2412M YMYH14450KRL" {

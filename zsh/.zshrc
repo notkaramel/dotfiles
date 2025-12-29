@@ -56,7 +56,6 @@ HIST_STAMPS="yy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
   git
-  autojump
   zsh-autosuggestions
   zsh-syntax-highlighting
   archlinux
@@ -98,6 +97,11 @@ export EDITOR=nvim
 export SC_JACK_DEFAULT_INPUTS="system:capture_1,system:capture_2"
 export SC_JACK_DEFAULT_OUTPUTS="system:playback_1,system:playback_2"
 
+# Android Studio and Android SDK
+export CAPACITOR_ANDROID_STUDIO_PATH="/usr/bin/android-studio"
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export ANDROID_HOME="$HOME/Android/Sdk"
+
 alias SHUTDOWN="shutdown now"
 
 alias connectWifi='sudo wpa_supplicant -B -i wlo1 -c /etc/wpa_supplicant/wpa_supplicant.conf'
@@ -135,8 +139,6 @@ export GPG_TTY=$(tty)
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-eval "$(zoxide init --cmd cd zsh)"
 
 # Added by Nix installer:
 # if [ -e /home/antoine/.nix-profile/etc/profile.d/nix.sh ]; then . /home/antoine/.nix-profile/etc/profile.d/nix.sh; fi
@@ -178,7 +180,7 @@ alias playcd='cdda2wav -D /dev/sr0 -t 1+ -B - | pw-play --rate 44100 --quality 1
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
 
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"
 
 alias dcb="docker compose build"
 alias dcu="docker compose up"
@@ -186,5 +188,6 @@ alias dcud="docker compose up -d"
 alias dcd="docker compose down"
 alias dcuw="docker compose up --watch"
 
-
 alias intellij="exec $HOME/Applications/idea-IU-252.26830.84/bin/idea &"
+
+eval "$(zoxide init --cmd cd zsh)"

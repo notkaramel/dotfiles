@@ -156,4 +156,4 @@ export XMODIFIERS=@im=ibus
 alias mcgillvpn='/opt/cisco/anyconnect/bin/vpnui &'
 alias mcgillvpn='/opt/cisco/anyconnect/bin/vpnui &'
 
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"
