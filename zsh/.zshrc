@@ -190,4 +190,6 @@ alias dcuw="docker compose up --watch"
 
 alias intellij="exec $HOME/Applications/idea-IU-252.26830.84/bin/idea &"
 
+alias mirror="wl-mirror $(niri msg --json focused-output | jq -r .name)"
+
 eval "$(zoxide init --cmd cd zsh)"

@@ -129,7 +129,7 @@ input {
 // ==== LAYOUT ====
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
-    gaps 12 // logical pixel
+    gaps 10 // logical pixel
 
     center-focused-column "on-overflow"
     // "never" (default): focusing an off-screen column will keep
@@ -163,13 +163,13 @@ layout {
         width 4
 
         // CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl(), etc.
-        active-color "#2475bcaa"
-        inactive-color "#505050"
+        // active-color "rgba(24, 56, 104, 0.57)"
+        // inactive-color "#505050"
 
         // Gradients (take precedence over solid colors)
         // - same syntax as CSS: linear-gradient(angle, from, to).
         // - use any CSS linear-gradient tool to set these up.
-        // active-gradient from="#80c8ff" to="#bbddff" angle=45
+        active-gradient from="rgba(32, 72, 133, 0.57)" to="rgba(53, 52, 131, 0.57)" angle=136
 
         // You can also color the gradient relative to the entire view
         // of the workspace, rather than relative to just the window itself.
@@ -194,7 +194,7 @@ layout {
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
-        // on
+        on
 
         // By default, the shadow draws only around its window, and not behind it.
         // Note that niri has no way of knowing about the CSD window corner
@@ -225,10 +225,10 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        // left 64
-        // right 64
-        // top 64
-        // bottom 64
+        left 12
+        right 12
+        top 0
+        bottom 0
     }
 }
 
@@ -248,7 +248,7 @@ spawn-at-startup "blueberry-tray"
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -270,8 +270,16 @@ animations {
         curve "ease-out-cubic"
     }
 
+    window-resize {
+        spring damping-ratio=0.9 stiffness=600 epsilon=0.0001
+    }
+
     workspace-switch {
-        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+        spring damping-ratio=0.8 stiffness=600 epsilon=0.0001
+    }
+
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
     }
 }
 
@@ -336,7 +344,7 @@ binds {
     Mod+Return { spawn "alacritty"; }
     Mod+D { spawn "wofi"; }
     Mod+Shift+L { spawn "swaylock"; }
-    Mod+E { spawn "nemo"; }
+    Mod+E { spawn "nautilus"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -359,6 +367,7 @@ binds {
     Mod+Period { spawn "wofi-emoji"; } 
 
     Mod+G { toggle-overview; }
+    Mod+T { spawn "alacritty"; }
     Mod+Shift+Q { close-window; }
 
     Mod+Left  { focus-column-left; }
