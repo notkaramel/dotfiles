@@ -193,3 +193,4 @@ alias intellij="exec $HOME/Applications/idea-IU-252.26830.84/bin/idea &"
 alias mirror="wl-mirror $(niri msg --json focused-output | jq -r .name)"
 
 eval "$(zoxide init --cmd cd zsh)"
+export PATH="$HOME/.local/bin:$PATH"
