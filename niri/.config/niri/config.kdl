@@ -130,6 +130,11 @@ input {
     focus-follows-mouse max-scroll-amount="68%"
 }
 
+cursor {
+    xcursor-theme "posy-white-tiny"
+    xcursor-size 24
+}
+
 // ==== LAYOUT ====
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {

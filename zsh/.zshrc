@@ -60,6 +60,7 @@ plugins=(
   zsh-syntax-highlighting
   archlinux
   sudo 
+  ufw
   tmux
   kubectl
   minikube
@@ -144,7 +145,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # if [ -e /home/antoine/.nix-profile/etc/profile.d/nix.sh ]; then . /home/antoine/.nix-profile/etc/profile.d/nix.sh; fi
 
 export NVM_DIR="$HOME/.nvm"
-alias startNVM='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'  # This loads nvm
+alias snvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # MATLAB
@@ -165,6 +166,8 @@ alias bi="bun install"
 alias ba="bun add"
 alias brb="bun run build"
 alias brp="bun run preview"
+alias brl="bun run lint"
+alias brf="bun run format"
 
 alias pecha="sleep 20 && echo \"KUCHA\""
 
