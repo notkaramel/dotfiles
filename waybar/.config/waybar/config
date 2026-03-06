@@ -104,7 +104,7 @@
 		},
 		"scroll-step": 6,
 		"on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
-		"on-click-right": "pavucontrol"
+		"on-click-right": "pwvucontrol"
 	},
 
   "backlight": {
