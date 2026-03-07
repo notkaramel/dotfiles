@@ -1,20 +1,28 @@
 * {
-	font-size: 12px;
-	font-family: "Fira Code", monospace;
+  font-size: 12px;
+  font-family: "Fira Code", monospace;
   font-weight: bold;
   border-radius: 10px;
 }
- 
-.modules-center {
-}
+
+.modules-center {}
 
 window#waybar {
-	background-color: transparent;
+  background-color: transparent;
 }
 
-#clock.1, #clock.2, #clock.3,
-#pulseaudio, #memory, #cpu, #network, #mpd,
-#battery, #disk, #backlight, #tray,
+#clock.1,
+#clock.2,
+#clock.3,
+#pulseaudio,
+#memory,
+#cpu,
+#network,
+#mpd,
+#battery,
+#disk,
+#backlight,
+#tray,
 #keyboard-state {
   background: rgba(20, 24, 20, 0.64);
   text-shadow: 2px 3px 2px rgba(20, 20, 20, 0.3);
@@ -23,6 +31,12 @@ window#waybar {
   margin-left: 2px;
   margin-right: 2px;
   color: white;
+  border: 2px solid transparent;
+}
+
+#pulseaudio:hover {
+  border: 2px solid rgba(40, 170, 120, 1);
+  background: rgba(20, 24, 20, 0.64);
 }
 
 #window {
@@ -37,27 +51,30 @@ window#waybar.empty #window {
   background: transparent;
 }
 
-#workspaces, #taskbar {
+#workspaces,
+#taskbar {
   background: rgba(18, 26, 23, 0.56);
 }
 
-#workspaces button, #taskbar button {
-	padding: 1px 4px;
-	color: #fafafa;
+#workspaces button,
+#taskbar button {
+  padding: 1px 4px;
+  color: #fafafa;
   border: 2px solid transparent;
 }
 
 /* button.active for hyprland, button.focused for sway */
-#workspaces button.active, #taskbar button.active {
-	color: #ffffff;
+#workspaces button.active,
+#taskbar button.active {
+  color: #ffffff;
   border: 2px solid rgba(40, 170, 120, 1);
 }
 
-#workspaces button:hover, #taskbar button:hover {
+#workspaces button:hover,
+#taskbar button:hover {
   color: black;
-  background-color: rgba(126,255,180,0.4);
+  background-color: rgba(126, 255, 180, 0.4);
   border: 2px solid rgba(80, 230, 180, 1);
-	box-shadow: inherit;
-	text-shadow: inherit;
+  box-shadow: inherit;
+  text-shadow: inherit;
 }
-
