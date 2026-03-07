@@ -10,7 +10,7 @@ environment {
   XCURSOR_SIZE "12"
   QT_QPA_PLATFORMTHEME "qt5ct"
   // GTK_THEME "adw-gtk3-dark:dark"
-  // GDK_BACKEND "wayland,x11,*"
+  GDK_BACKEND "wayland,x11,*"
   QT_QPA_PLATFORM "wayland;xcb"
   // QT_AUTO_SCREEN_SCALE_FACTOR "1"
   
