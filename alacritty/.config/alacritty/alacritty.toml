@@ -81,3 +81,8 @@ white = "#e2e8f0"
 #     # "~/.config/alacritty/themes/themes/catppuccin_macchiato.toml"
 # ]
 
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"

@@ -168,7 +168,7 @@ layout {
 
     focus-ring {
         // off
-        width 3
+        width 2
 
         // CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl(), etc.
         // active-color "rgba(24, 56, 104, 0.57)"
@@ -177,7 +177,7 @@ layout {
         // Gradients (take precedence over solid colors)
         // - same syntax as CSS: linear-gradient(angle, from, to).
         // - use any CSS linear-gradient tool to set these up.
-        active-gradient from="rgba(32, 72, 133, 0.57)" to="rgba(53, 52, 131, 0.57)" angle=136
+        active-gradient from="rgba(32, 72, 173, 0.57)" to="rgba(53, 132, 131, 0.57)" angle=136
 
         // You can also color the gradient relative to the entire view
         // of the workspace, rather than relative to just the window itself.
@@ -233,8 +233,8 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        left 9
-        right 9
+        left 0
+        right 0
         top 0
         bottom 0
     }

@@ -1,7 +1,8 @@
 # Clean version of .zshrc
 
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="kphoen"
+ZSH_THEME="random"
+# Good themes: juanghurtado
 zstyle ':omz:update' mode auto
 
 DISABLE_MAGIC_FUNCTIONS="false"
@@ -109,3 +110,6 @@ alias dcuw="docker compose up --watch"
 
 # --- Tools ---
 eval "$(zoxide init --cmd cd zsh)"
+
+# bun completions
+[ -s "/home/antoine/.bun/_bun" ] && source "/home/antoine/.bun/_bun"

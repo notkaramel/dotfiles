@@ -1,0 +1,18 @@
+[submodule "CustomizeLinux/adw-gtk3"]
+	path = CustomizeLinux/adw-gtk3
+	url = git@github.com:lassekongo83/adw-gtk3.git
+[submodule "CustomizeLinux/minegrub"]
+	path = CustomizeLinux/minegrub
+	url = https://github.com/Lxtharia/minegrub-theme.git
+[submodule "CustomizeLinux/posy-cursors"]
+	path = CustomizeLinux/posy-cursors
+	url = git@github.com:notkaramel/posy-cursors.git
+[submodule "CustomizeLinux/SpotX-Bash"]
+	path = CustomizeLinux/SpotX-Bash
+	url = https://github.com/SpotX-Official/SpotX-Bash.git
+[submodule "CustomizeLinux/Tela-icon-theme"]
+	path = CustomizeLinux/Tela-icon-theme
+	url = git@github.com:vinceliuice/Tela-icon-theme.git
+[submodule "CustomizeLinux/yay"]
+	path = CustomizeLinux/yay
+	url = https://aur.archlinux.org/yay.git
