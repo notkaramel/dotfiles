@@ -177,6 +177,7 @@ cat allPackages.txt | yay -S - --needed
   - Gateway: `192.168.0.1`
   - To inspect: `nmcli connection show`
   - To reconfigure: `nmcli connection modify <connection> ipv4.addresses 192.168.0.99/24 ipv4.gateway 192.168.0.1 ipv4.method manual && nmcli connection up <connection>`
+- WPS Writer needs `libtiff5` package for PDF export
 
 ---
 

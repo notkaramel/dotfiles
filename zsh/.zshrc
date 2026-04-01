@@ -90,7 +90,6 @@ alias enable-nvidia='export __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAM
 alias cal='cal -m'
 alias bruh="echo 'bruh' | cowsay"
 alias pecha="sleep 20 && echo \"KUCHA\""
-alias intellij="exec $HOME/Applications/idea-IU-252.26830.84/bin/idea &"
 
 # --- Aliases: bun ---
 alias brd="bun run dev"
