@@ -19,8 +19,8 @@ plugins=(
   sudo
   ufw
   tmux
-  kubectl
-  minikube
+  zsh-interactive-cd
+  zsh-navigation-tools
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -109,6 +109,7 @@ alias dcuw="docker compose up --watch"
 
 # --- Tools ---
 eval "$(zoxide init --cmd cd zsh)"
+alias clear_cache="echo 3 > /proc/sys/vm/drop_caches"
 
 # bun completions
 [ -s "/home/antoine/.bun/_bun" ] && source "/home/antoine/.bun/_bun"

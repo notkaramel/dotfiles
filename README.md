@@ -62,6 +62,24 @@ To remove a system-wide stow:
 ```sh
 sudo stow -D <app> --dir ~/dotfiles --target /usr/share/themes
 ```
+---
+
+## Docker in user space (rootless)
+
+[INFO] Installed docker.service successfully.
+[INFO] To control docker.service, run: `systemctl --user (start|stop|restart) docker.service`
+[INFO] To run docker.service on system startup, run: `sudo loginctl enable-linger antoine`
+
+[INFO] Creating CLI context "rootless"
+Successfully created context "rootless"
+[INFO] Using CLI context "rootless"
+Current context is now "rootless"
+
+[INFO] Make sure the following environment variable(s) are set (or add them to ~/.bashrc):
+export PATH=/home/antoine/bin:$PATH
+
+[INFO] Some applications may require the following environment variable too:
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
 
 ---
 
@@ -167,6 +185,14 @@ Reinstalling all packages:
 ```sh
 cat allPackages.txt | yay -S - --needed
 ```
+
+---
+
+## Printing (CUPS)
+
+Printer setup and driver documentation is available in:
+
+- `cups-printer/README.md`
 
 ---
 

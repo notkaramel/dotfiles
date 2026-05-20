@@ -4,7 +4,7 @@ window {
   font-size: 16px;
   border-radius: 12px;
   padding: 8px;
-  background: linear-gradient(135deg, #89d3e7 0%, #a2f0d4 50%, #fff1b2 100%);
+  background: linear-gradient(20deg, rgba(210, 207, 126, 0.85) 0%, rgba(183, 148, 234, 0.85) 100%);
   opacity: 0.95;
 }
 
@@ -29,7 +29,8 @@ window {
 }
 
 #input:focus {
-  background-color: rgba(69, 71, 90, 0.8);
+  background-color: rgba(78, 73, 85, 0.355);
+  box-shadow: 0 0 0 1px rgba(210, 207, 126, 0.45);
 }
 
 #scroll {
@@ -68,10 +69,10 @@ window {
 }
 
 #entry:selected {
-  background: linear-gradient(90deg, rgb(53, 97, 80), rgb(126, 113, 90));
+  background: linear-gradient(90deg, rgba(179, 210, 126, 0.45), rgba(167, 132, 218, 0.45));
   /* border: 1px solid rgba(106, 204, 231, 0.3); */ 
-  border: none;
-  box-shadow: 0 2px 8px rgba(168, 213, 226, 0.2);
+  border: 1px solid rgba(179, 210, 126, 0.35);
+  box-shadow: 0 2px 8px rgba(167, 132, 218, 0.25);
 }
 
 #entry:selected #text {

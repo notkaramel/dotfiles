@@ -1,9 +1,4 @@
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "waybar"
-spawn-at-startup "hyprpaper"
-spawn-at-startup "sudo modprobe v4l2loopback"
-spawn-at-startup "blueberry-tray"
-
 environment {
   DISPLAY ":0"
   XCURSOR_SIZE "12"
@@ -13,15 +8,21 @@ environment {
   XDG_SESSION_TYPE "wayland"
 }
 
+output "eDP-1" {
+    mode "1920x1080@60"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+}
+
 output "GIGA-BYTE TECHNOLOGY CO., LTD. G27F 2 23030B002769" {
-  // mode "1920x1080@164.998"
-  mode "1920x1080@164.998"
+  mode "1920x1080@143.998"
   scale 1
   position x=0 y=0
 }
 
 output "HKC OVERSEAS LIMITED E2411K 0000000000001" {
-  mode "1920x1080@60.000"
+  mode "1920x1080@60"
   scale 1
   position x=1920 y=0
 }
@@ -47,6 +48,11 @@ output "Microstep MSI G274QPF CC2H633602149" {
   position x=0 y=-1080
 }
 
+output "HDMI-A-1" {
+  mode "1920x1080@60"
+  position x=0 y=0
+}
+
 input {
     keyboard {
         xkb {
@@ -64,11 +70,13 @@ input {
         scroll-method "two-finger"
     }
 
-    mouse
+    mouse {
+    }
 
-    trackpoint
+    trackpoint {
+    }
 
-    focus-follows-mouse max-scroll-amount="90%"
+    focus-follows-mouse max-scroll-amount="75%"
 }
 
 cursor {
@@ -77,7 +85,7 @@ cursor {
 }
 
 layout {
-    gaps 10
+    gaps 9
 
     center-focused-column "on-overflow"
 
@@ -91,8 +99,8 @@ layout {
         proportion 1.0
     }
 
-    default-column-width
-
+    default-column-width {
+    }
 
     focus-ring {
         width 3
@@ -101,7 +109,6 @@ layout {
 
     border {
         off
-
         width 1
         active-color "#ffc87f"
         inactive-color "#505050"
@@ -122,6 +129,11 @@ layout {
     }
 }
 
+spawn-at-startup "waybar"
+spawn-at-startup "hyprpaper"
+spawn-at-startup "sudo modprobe v4l2loopback"
+spawn-at-startup "blueberry-tray"
+
 prefer-no-csd
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
@@ -129,52 +141,30 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
     slowdown 2.0
     window-open {
-        duration-ms 180
-        curve "cubic-bezier" 0.258 0.036 0.327 0.954
+        duration-ms 240
+        curve "ease-out-cubic"
     }
 
     window-resize {
-        duration-ms 200
-        curve "cubic-bezier" 0.258 0.036 0.327 0.954
+        spring damping-ratio=0.9 stiffness=600 epsilon=0.0001
     }
 
     workspace-switch {
-        duration-ms 200
-        curve "cubic-bezier" 0.258 0.036 0.327 0.954
+        spring damping-ratio=0.8 stiffness=600 epsilon=0.0001
     }
 
     horizontal-view-movement {
-        curve "cubic-bezier" 0.258 0.036 0.327 0.954 ;
-        duration-ms 180
-    }
-
-    window-close {
-        curve "cubic-bezier" 0.258 0.036 0.327 0.954 ;
-        duration-ms 180
-    }
-
-    window-movement {
-        curve "cubic-bezier" 0.258 0.036 0.327 0.954 ;
-        duration-ms 200
-    }
-
-    overview-open-close {
-        curve "cubic-bezier" 0.258 0.036 0.327 0.954
-        duration-ms 180
-    }
-    config-notification-open-close {
-        duration-ms 200
-        curve "cubic-bezier" 0.258 0.036 0.327 0.954
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
     }
 }
 
 window-rule {
-    match app-id=r"^org\.wezfurlong\.wezterm$"
-    default-column-width
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
 }
 
 window-rule {
-    match app-id=r"vivaldi$" title="^Picture-in-Picture$"
+    match app-id=r#"vivaldi$"# title="^Picture-in-Picture$"
     open-floating true
 }
 
@@ -184,13 +174,8 @@ window-rule {
 }
 
 window-rule {
-    geometry-corner-radius 10
+    geometry-corner-radius 12
     clip-to-geometry true
-    opacity 0.9
-    background-effect {
-        blur true
-        xray true
-    }
 }
 
 binds {
@@ -201,14 +186,14 @@ binds {
     Mod+Shift+L { spawn "swaylock"; }
     Mod+E { spawn "nautilus"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+" "-l" "1.2"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-" "-l" "1.2"; }
-    XF86AudioMute allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-    XF86AudioMicMute allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
-    XF86AudioPlay allow-when-locked=true { spawn "playerctl" "play-pause"; }
-    XF86AudioNext allow-when-locked=true { spawn "playerctl" "next"; }
-    XF86AudioPrev allow-when-locked=true { spawn "playerctl" "previous"; }
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "set" "3%+" "-e" "-q"; }
+    XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+" "-l" "1.2"; }
+    XF86AudioLowerVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-" "-l" "1.2"; }
+    XF86AudioMute         allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute      allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86AudioPlay         allow-when-locked=true { spawn "playerctl" "play-pause"; }
+    XF86AudioNext         allow-when-locked=true { spawn "playerctl" "next"; }
+    XF86AudioPrev         allow-when-locked=true { spawn "playerctl" "previous"; }
+    XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessctl" "set" "3%+" "-e" "-q"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "2%-" "-e" "-q"; }
 
     Mod+B { spawn "blueberry"; }
@@ -263,8 +248,8 @@ binds {
     Mod+Shift+U         { move-workspace-down; }
     Mod+Shift+I         { move-workspace-up; }
 
-    Mod+WheelScrollUp cooldown-ms=150 { focus-column-left; }
-    Mod+WheelScrollDown cooldown-ms=150 { focus-column-right; }
+    Mod+WheelScrollUp     cooldown-ms=150 { focus-column-left; }
+    Mod+WheelScrollDown   cooldown-ms=150 { focus-column-right; }
 
     Mod+Shift+WheelScrollDown      { focus-column-right; }
     Mod+Shift+WheelScrollUp        { focus-column-left; }
@@ -338,25 +323,4 @@ overview {
 layer-rule {
     match namespace="^wallpaper$"
     place-within-backdrop true
-}
-
-window-rule {
-    match is-focused=true
-    background-effect {
-        blur true
-    }
-}
-
-blur {
-    passes 4
-    noise 0.05
-    offset 2.0
-    saturation 0.6
-}
-
-gestures {
-    hot-corners
-}
-hotkey-overlay {
-    skip-at-startup
 }
