@@ -15,13 +15,23 @@ environment {
 
 output "GIGA-BYTE TECHNOLOGY CO., LTD. G27F 2 23030B002769" {
   // mode "1920x1080@164.998"
-  mode "1920x1080@164.998"
+  mode "1920x1080@170"
   scale 1
   position x=0 y=0
 }
 
+output "ASUSTek COMPUTER INC VG278 LALMQS010165" {
+  mode "1920x1080@144.001"
+  // mode "1920x1080@119.982"
+  // mode "1920x1080@60"
+  scale 1
+  // transform "270"
+  position x=0 y=0
+}
+
 output "HKC OVERSEAS LIMITED E2411K 0000000000001" {
-  mode "1920x1080@60.000"
+  mode "1920x1080@143.997"
+  // mode "1920x1080@60"
   scale 1
   position x=1920 y=0
 }
@@ -186,7 +196,7 @@ window-rule {
 window-rule {
     geometry-corner-radius 10
     clip-to-geometry true
-    opacity 0.9
+    opacity 1.0
     background-effect {
         blur true
         xray true
@@ -293,7 +303,9 @@ binds {
     Mod+Tab { focus-monitor-next; }
     Mod+Shift+Tab { move-window-to-monitor-next; }
 
-    Mod+S { move-workspace-to-monitor-next; }
+    Mod+S hotkey-overlay-title="Swap workspaces from two monitors" {
+        spawn "zsh" "-c" "niri msg action move-workspace-to-monitor-next && niri msg action focus-workspace-up && niri msg action move-workspace-to-monitor-next";
+    }
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
