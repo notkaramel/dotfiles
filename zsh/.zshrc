@@ -72,16 +72,13 @@ alias project='cd ~/Partage/Projects/'
 alias coding='cd $HOME/Partage/Coding'
 
 # --- Aliases: desktop & media ---
+alias ns="niri-session"
 alias setbackground="feh --bg-fill --randomize $HOME/.wallpaper/"
 alias fallinlight="feh --bg-fill --randomize $HOME/Pictures/Fallin\'\ Light"
 alias gotop="gotop -l kitchensink --nvidia"
 alias micvol="wpctl set-volume @DEFAULT_SOURCE@"
 alias playcd='cdda2wav -D /dev/sr0 -t 1+ -B - | pw-play --rate 44100 --quality 15 -'
 alias mirror="wl-mirror $(niri msg --json focused-output | jq -r .name)"
-
-# --- Aliases: input method ---
-alias ibus-en='ibus engine xkb:us:intl:eng'
-alias ibus-vn='ibus engine Bamboo'
 
 # --- Aliases: nvidia ---
 alias enable-nvidia='export __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
@@ -101,11 +98,17 @@ alias brl="bun run lint"
 alias brf="bun run format"
 
 # --- Aliases: docker ---
+alias dc="docker compose"
 alias dcb="docker compose build"
 alias dcu="docker compose up"
 alias dcud="docker compose up -d"
+alias dcub="docker compose up --build"
 alias dcd="docker compose down"
 alias dcuw="docker compose up --watch"
+alias dclf="docker compose logs -f"
+alias dcp="docker compose pull"
+alias dcr="docker compose restart"
+alias dps="docker ps"
 
 # --- Tools ---
 eval "$(zoxide init --cmd cd zsh)"
